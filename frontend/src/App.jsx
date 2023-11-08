@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import imgD from '../src/assets/illustration-sign-up-desktop.svg';
 import imgM from '../src/assets/illustration-sign-up-mobile.svg';
-import icon from '../src/assets/icon-list.svg'
+import icon from '../src/assets/icon-list.svg';
+import success from '../src/assets/icon-success.svg'
 
 function App() {
   const [email, setEmail] = useState("");
@@ -46,6 +47,14 @@ function App() {
         <img src={screen < 1000 ? imgM : imgD } alt="" />
       </div>
     </div>
+    {isSubmitted && (
+       <div>
+        <img src={success} alt="success" />
+        <h3>Thanks for Suscribing</h3>
+        <p>A confirmation mail has been sent to {email}. Please open it and click the button inside to confirm your subscription.</p>
+        <button>Dismiss message</button>
+       </div> 
+      )}
   </main>
 
   )
