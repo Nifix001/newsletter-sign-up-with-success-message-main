@@ -6,7 +6,19 @@ export default {
     "./src/App.jsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'tmt': "hsl(4, 100%, 67%)",
+        'slate': "hsl(234, 29%, 20%)",
+        'charcoal': "hsl(235, 18%, 26%)"
+      },
+      fontFamily: {
+        roboto: ['Roboto']
+      },
+      screens: {
+        'xs': '300px'
+      }
+    },
   },
   plugins: [],
 }
