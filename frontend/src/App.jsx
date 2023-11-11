@@ -32,14 +32,14 @@ function App() {
       {
       !isSubmitted
        ?
-    <div className='bg-white rounded-3xl shadow-xl flex justify-between w-1/2 h-3/5 gap-8 py-12 px-8 xs:max-lg:h-full xs:max-lg:w-full xs:max-lg:flex xs:max-lg:flex-col-reverse xs:max-lg:p-2'>
-      <div className='justify-start px-8 py-12'>
-        <h3 className='text-6xl text-center font-bold text-charcoal'>Stay Updated!</h3>
-        <p className='text-roboto text-gray-900 my-4 font-medium text-base'>Join 60,000+ product managers recieving monthly <br /> updates on: </p>
+    <div className='bg-white rounded-3xl shadow-xl flex justify-between w-1/2 h-3/5 gap-4 py-8 px-6 xs:max-lg:h-screen xs:max-lg:w-screen xs:max-lg:flex xs:max-lg:flex-col-reverse xs:max-lg:p-0 xs:max-lg:gap-2 xs:max-lg:rounded-none'>
+      <div className='justify-start px-6 py-8 xs:max-lg:px-8 xs:max-lg:py-12 xs:max-lg:items-start xs:max-lg:h-3/4 xs:max-lg:text-xl '>
+        <h3 className='text-6xl mb-2 text-center font-bold text-charcoal xs:max-lg:text-start'>Stay Updated!</h3>
+        <p className='text-roboto text-gray-900 my-4 font-medium text-base mt-8 xs:max-lg:text-xl'>Join 60,000+ product managers recieving monthly updates on: </p>
         <ul>
-          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base'><img src={icon} alt="icon" /> Product discovery and building what matters</li>
-          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base'><img src={icon} alt="icons" /> Measuring to ensure updates are a success</li>
-          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base'><img src={icon} alt="icon" /> And much more!</li>
+          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base xs:max-lg:text-xl'><img src={icon} alt="icon" /> Product discovery and building what matters</li>
+          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base xs:max-lg:text-xl'><img src={icon} alt="icons" /> Measuring to ensure updates are a success</li>
+          <li className='flex gap-4 text-roboto text-gray-900 my-3 font-medium text-base xs:max-lg:text-xl'><img src={icon} alt="icon" /> And much more!</li>
         </ul> 
         <form
         action='post' 
@@ -47,7 +47,7 @@ function App() {
         className="grid "
         >
           <div className='flex justify-between'>
-          <label htmlFor="email" className='text-roboto text-charcoal my-3 font-bold text-sm' >Email Address</label>
+          <label htmlFor="email" className='text-roboto text-charcoal my-3 font-bold text-sm xs:max-lg:text-lg' >Email Address</label>
           {
             error ?
             <h3 className='text-rose-400 text-sm'>Valid email required</h3>
@@ -65,7 +65,7 @@ function App() {
             setError(true);
           }}
           placeholder="email@company.com" 
-          className={`rounded-xl p-4
+          className={`rounded-xl p-4 
           ${error ? "border-rose-400" : "border-2" }
           ${error ? "border-2" : "outline-0"} focus:outline-2
           ${error ? "outline-rose-400" : "outline-slate-500"}
@@ -73,19 +73,17 @@ function App() {
           `}
           reqiuired 
           />
-          <button className='bg-charcoal text-white text-base font-semibold py-4 px-12 rounded-xl hover:bg-tmt mt-8' type='submit'>Subscribe to montly newsletter</button>
+          <button className='bg-charcoal text-white text-base font-semibold py-4 px-12 rounded-xl hover:bg-gradient-to-r hover:from-tmt hover:to-orange-400 mt-8 xs:max-lg:text-xl xs:max-lg:px-4' type='submit'>Subscribe to montly newsletter</button>
         </form>
       </div>
-      <div className='flex items-center'>
-        <img src={screen < 1024 ? imgM : imgD } alt="" />
-      </div>
+        <img src={screen < 1024 ? imgM : imgD } alt=""  className='xs:max-lg:w-full xs:max-lg:object-fill'/>
     </div>
     :
-       <div className='bg-white p-16 w-3/12 h-1/2 rounded-3xl m-auto grid gap-6'>
-        <img src={success} alt="success" />
-        <h1 className='text-charcoal font-bold text-6xl'>Thanks for Subscribing!</h1>
-        <p className='text-base text-gray-800 font-medium'>A confirmation mail has been sent to <span className='text-charcoal font-bold'>{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
-        <button className='bg-charcoal text-white text-base font-semibold py-4 px-12 rounded-xl hover:bg-tmt ' 
+       <div className='bg-white py-14 px-8 w-1/4 h-1/2 rounded-3xl  flex flex-col justify-evenly xs:max-lg:w-screen xs:max-lg:h-screen xs:max-lg:rounded-none xs:max-lg:gap-1 xs:max-lg:pb-2'>
+        <img src={success} alt="success" width="40px" height="40px" className='-mb-28' />
+        <h1 className='text-charcoal font-bold text-6xl mt-24 '>Thanks for Subscribing!</h1>
+        <p className='text-base text-gray-800 my-2 font-medium xs:max-lg:text-xl xs:max-lg:-mt-16'>A confirmation mail has been sent to <span className='text-charcoal font-bold xs:max-lg:text-xl'>{email}</span>. Please open it and click the button inside to confirm your subscription.</p>
+        <button className='bg-charcoal text-white text-base font-semibold py-4 px-12 rounded-xl hover:bg-gradient-to-r hover:from-tmt hover:to-orange-400 xs:max-lg:py-8 xs:max-lg:px-4 xs:max-lg:text-xl xs:max-lg:mt-36' 
         onClick={() => {
           setEmail('');
           setIsSubmitted('');
