@@ -32,7 +32,7 @@ function App() {
       {
       !isSubmitted
        ?
-    <div className='bg-white rounded-3xl shadow-xl flex justify-between w-1/2 h-3/4 gap-4 py-8 px-6 xs:max-lg:h-screen xs:max-lg:w-screen xs:max-lg:flex xs:max-lg:flex-col-reverse xs:max-lg:p-0 xs:max-lg:gap-2 xs:max-lg:rounded-none'>
+    <div className='bg-white rounded-3xl shadow-xl flex justify-between w-3/5 h-3/4 gap-4 py-8 px-6 xs:max-lg:h-screen xs:max-lg:w-screen xs:max-lg:flex xs:max-lg:flex-col-reverse xs:max-lg:p-0 xs:max-lg:gap-2 xs:max-lg:rounded-none'>
       <div className='justify-start grid p-2 xs:max-lg:px-8 xs:max-lg:py-8 xs:max-lg:items-start'>
         <h3 className='text-4xl mb-2 text-center font-bold text-charcoal xs:max-lg:text-start'>Stay Updated!</h3>
         <p className='text-roboto text-gray-900 my-4 font-medium text-base xl'>Join 60,000+ product managers recieving monthly updates on: </p>

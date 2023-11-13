@@ -34,10 +34,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](../src/assets/Screenshot_(222).png)
-![](../src/assets/Screenshot_(223).png)
-![](../src/assets/Screenshot_20231111_071410_Chrome.jpg)
-![](../src/assets/Screenshot_20231112_221139_Chrome.jpg)
+![](./src/assets/Screenshot_(222).png)
+![](./src/assets/Screenshot_(223).png)
+![](./src/assets/Screenshot_20231111_071410_Chrome.jpg)
+![](./src/assets/Screenshot_20231112_221139_Chrome.jpg)
 
 
 
